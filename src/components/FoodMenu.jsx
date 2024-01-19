@@ -1,15 +1,32 @@
-const FoodMenu = ({ menuName, foodCategory, items }) => {
+const FoodMenu = ({ menuName, mainDishes, salads, sides }) => {
     return (
         <article>
             <div className="food-menu">
                 <h2 className="menu-name">The {menuName} Menu</h2>
-                <p className="food-category">{foodCategory}</p>
+                <p className="main-dishes-subtitle">Main Dishes</p>
                 <ul className="main-dishes-ul">
-                    {items.map((item, index) => (
+                    {mainDishes.map((item, index) => (
                         <li key={index}>
                             <strong>{item.name}</strong>: - ${item.price}
                         </li>
-                    ))}</ul>
+                    ))}
+                </ul>
+                <p className="salads-dishes-subtitle">Salads</p>
+                <ul className="salads-dishes-ul">
+                    {salads.map((item, index) => (
+                        <li key={index}>
+                            <strong>{item.name}</strong>: - ${item.price}
+                        </li>
+                    ))}
+                </ul>
+                <p className="sides-dishes-subtitle">Sides</p>
+                <ul className="sides-dishes-ul">
+                    {sides.map((item, index) => (
+                        <li key={index}>
+                            <strong>{item.name}</strong>: - ${item.price}
+                        </li>
+                    ))}
+                </ul>
             </div>
         </article>
     )
