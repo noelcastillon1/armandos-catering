@@ -8,8 +8,8 @@ const FoodMenuSection = () => {
     return (
         <>
             <AmericanMenu />
-            <ItalianMenu />
             <FrenchMenu />
+            <ItalianMenu />
             <MexicanMenu />
             <VegetarianMenu />
         </>

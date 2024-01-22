@@ -6,7 +6,7 @@ import { frenchMenuItems } from "./constants/index";
 
 const FrenchMenu = () => {
     return (
-        <FoodMenu menuImg={menuImg} menuName={"French"} mainDishes={frenchMenuItems.mainDishes} salads={frenchMenuItems.salads} sides={frenchMenuItems.sides} />
+        <FoodMenu menuImg={menuImg} isImgFirst={true} menuName={"French"} mainDishes={frenchMenuItems.mainDishes} salads={frenchMenuItems.salads} sides={frenchMenuItems.sides} />
     )
 }
 

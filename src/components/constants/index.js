@@ -2,7 +2,6 @@ export const americanMenuItems = {
   mainDishes: [
     { name: "BBQ Pork Ribs", price: 16 },
     { name: "Honey Spicy BBQ Pork Chops", price: 16 },
-    { name: "Surf, ", price: 16 },
     {
       name: "Surf, Turf, & Sky (Shrimp, filet mignon, and chicken)",
       price: null,
