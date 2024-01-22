@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Prata", serif;
+}
+
+p,
+li {
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  font-weight: 300;
+}
