@@ -184,9 +184,9 @@ export const vegetarianMenuItems = {
       price: 16,
       desc: "Bathed in a creamy lemon sauce",
     },
-    { name: "Tri-Tip", price: "Market Price" },
-    { name: "Prime Ribs", price: "Market Price" },
-    { name: "New York Steak", price: "Market Price" },
+    { name: "Tri-Tip", price: null },
+    { name: "Prime Ribs", price: null },
+    { name: "New York Steak", price: null },
     {
       name: "Grilled Salmon",
       price: 17,
