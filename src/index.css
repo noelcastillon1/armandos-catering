@@ -18,6 +18,12 @@ li {
   font-family: "Roboto", sans-serif;
 }
 
+p,
 li {
   font-weight: 300;
+}
+
+.card,
+.btn {
+  border-radius: 0;
 }
