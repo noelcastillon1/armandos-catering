@@ -25,10 +25,10 @@ const Story = () => {
     }
 
     return (
-        <div className="story-wrapper grid col-span-1 md:grid-cols-2 my-8">
+        <div className="story-wrapper grid col-span-1 lg:grid-cols-2 my-8">
             <div className="story-container px-12">
                 <p className="py-4 tracking-widest text-primary uppercase">Meet the Chef</p>
-                <h4 className="text-5xl md:text-8xl py-4">Armando's Story</h4>
+                <h4 className="text-5xl md:text-8xl py-4 z-10">Armando's Story</h4>
                 <label className="swap">
                     <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
                     <div className="swap-on text-blue-500">Lee en Espanol</div>
