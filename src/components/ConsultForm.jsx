@@ -1,10 +1,34 @@
 import { Field, Form } from "houseform"
 import { z } from "zod"
 
+const url = "https://script.google.com/macros/s/AKfycbxI9UC_2019X-UGxMOXIDkIkS8rOSDp6WipD3jQxgbteMUIsHrPWDB6C72isgGYd-ht/exec"
+
+// fetch(url, {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'text/plain;charset=utf-8',
+//     },
+//     body: JSON.stringify(data),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => console.log('data', data))
+//     .catch((err) => console.log('err', err));
+
 const ConsultForm = () => {
     return (
         <Form
             onSubmit={(values) => {
+                fetch(url, {
+                    mode: "no-cors",
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'text/plain;charset=utf-8',
+                    },
+                    body: JSON.stringify(values),
+                  })
+                    .then((res) => res.json())
+                    .then((values) => console.log('values', values))
+                    .catch((err) => console.log('err', err));
                 alert("Form was submitted with: " + JSON.stringify(values));
             }}
         >
@@ -35,7 +59,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -52,7 +76,7 @@ const ConsultForm = () => {
                                     <label className="input input-bordered flex items-center gap-2">
                                         Phone Number
                                         <input
-                                            type="text"
+                                            type="tel"
                                             className="grow"
                                             placeholder="(555) 555-5555"
                                             value={value}
@@ -61,7 +85,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -78,7 +102,7 @@ const ConsultForm = () => {
                                     <label className="input input-bordered flex items-center gap-2">
                                         Email
                                         <input
-                                            type="text"
+                                            type="email"
                                             className="grow"
                                             placeholder="janedoe@email.com"
                                             value={value}
@@ -87,7 +111,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -114,7 +138,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -140,7 +164,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -166,7 +190,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -192,7 +216,7 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
@@ -216,13 +240,15 @@ const ConsultForm = () => {
                                         />
                                     </label>
                                     {errors.map((error) => (
-                                        <p key={error}>{error}</p>
+                                        <p className="text-error" key={error}>{error}</p>
                                     ))}
                                 </div>
                             )
                         }}
                     </Field>
-                    <button className="btn btn-primary" onClick={submit}>Submit</button>
+                    <button className="btn btn-primary" disabled={!isValid} type="submit">
+                        Submit
+                    </button>
                 </form>
             )}
         </Form>
