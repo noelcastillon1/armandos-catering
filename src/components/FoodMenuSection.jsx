@@ -6,13 +6,13 @@ import VegetarianMenu from "./VegetarianMenu"
 
 const FoodMenuSection = () => {
     return (
-        <>
+        <section id="menus">
             <AmericanMenu />
             <FrenchMenu />
             <ItalianMenu />
             <MexicanMenu />
             <VegetarianMenu />
-        </>
+        </section>
     )
 }
 

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="footer bg-gradient-to-tr from-primary p-10 bg-neutral text-neutral-content">
+        <footer id="contact" className="footer bg-gradient-to-tr from-primary p-10 bg-neutral text-neutral-content">
             <nav className="footer-contact">
                 <header className="footer-title">Contact</header>
                 <a
