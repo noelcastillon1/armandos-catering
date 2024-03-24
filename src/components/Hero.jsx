@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <div className="hero min-h-screen bg-hero">
+        <div id="hero" className="hero min-h-screen bg-hero">
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center">
                 <div className="">
@@ -11,11 +11,15 @@ const Hero = () => {
                     </p>
                     <div className="hero-btn-wrapper flex justify-center gap-3 flex-col md:flex-row md:justify-around">
                         <div className="hero-btn-container">
-                            <button className="btn btn-primary">View Our Menus</button></div>
+                            <a href="/#menus"><button className="btn btn-primary">View Our Menus</button></a>
+                        </div>
                         <div className="hero-btn-container">
-                            <button className="btn btn-primary">Make an Appointment</button></div>
+                            <a href="/#interestForm"><button className="btn btn-primary">Make an Appointment</button></a>
+                        </div>
                         <div className="hero-btn-container">
-                            <button className="btn btn-primary">Follow Us</button></div></div>
+                            <a href="/#contact"><button className="btn btn-primary">Follow Us</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

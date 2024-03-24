@@ -37,7 +37,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst }) 
                         </div>
                     </div>
                     <div className="menu-button-container py-4 text-center md:text-left">
-                        <button className="btn btn-primary">Book This Menu</button>
+                        <a href="/#interestForm"><button className="btn btn-primary">Book This Menu</button></a>
                     </div>
                 </div>
                 <div className={`menu-img-container h-96 md:h-full w-full ${isImgFirst == true ? "md:order-first" : ""}`}>
