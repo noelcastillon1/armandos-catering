@@ -1,12 +1,12 @@
 import { Field } from "houseform"
 import { z } from "zod"
 
-const FormField = ({ labelContent, placeholder, changeValidateMessage }) => {
+const FormField = ({ fieldName, labelContent, placeholder, changeValidateMessage, isRequired }) => {
     return (
         <Field
-            name="phoneNum"
+            name={fieldName}
             initialValue={""}
-            onChangeValidate={z.string().min(1, {changeValidateMessage})}
+            onChangeValidate={isRequired ? z.string().min(1, {changeValidateMessage}) : null}
         >
             {({ value, setValue, onBlur, errors }) => {
                 return (
