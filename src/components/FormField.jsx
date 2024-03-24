@@ -1,7 +1,7 @@
 import { Field } from "houseform"
 import { z } from "zod"
 
-const FormField = ({ fieldName, labelContent, placeholder, changeValidateMessage, isRequired }) => {
+const FormField = ({ fieldName, labelContent, inputType, placeholder, changeValidateMessage, isRequired }) => {
     return (
         <Field
             name={fieldName}
@@ -10,11 +10,11 @@ const FormField = ({ fieldName, labelContent, placeholder, changeValidateMessage
         >
             {({ value, setValue, onBlur, errors }) => {
                 return (
-                    <div>
-                        <label className="input input-bordered flex items-center gap-2">
+                    <>
+                        <label className="input input-bordered flex items-center gap-2 w-full">
                             {labelContent}
                             <input
-                                type="tel"
+                                type={inputType}
                                 className="grow"
                                 placeholder={placeholder}
                                 value={value}
@@ -25,7 +25,7 @@ const FormField = ({ fieldName, labelContent, placeholder, changeValidateMessage
                         {errors.map((error) => (
                             <p className="text-error" key={error}>{error}</p>
                         ))}
-                    </div>
+                    </>
                 )
             }}
         </Field>
