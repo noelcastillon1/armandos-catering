@@ -25,23 +25,31 @@ const Story = () => {
     }
 
     return (
-        <div className="story-wrapper grid col-span-1 lg:grid-cols-2 my-8">
-            <div className="story-container px-12">
-                <p className="py-4 tracking-widest text-primary uppercase">Meet the Chef</p>
-                <h4 className="text-5xl md:text-8xl py-4 z-10">Armando's Story</h4>
-                <label className="swap">
-                    <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-                    <div className="swap-on text-blue-500">Lee en Espanol</div>
-                    <div className="swap-off text-blue-500">Read in English</div>
-                </label>
-                <div className="story-content">
-                    {isChecked ? engStory : enStory}
+        <>
+            <h4 className="text-5xl py-4 z-10 text-center">Armando's Story</h4>
+            <details tabIndex={0} className="collapse collapse-arrow">
+                <summary className="collapse-title max-w-fit py-4 tracking-widest text-primary uppercase">
+                    Meet the Chef
+                </summary>
+                <div className="collapse-content">
+                    <div className="story-wrapper grid col-span-1 lg:grid-cols-2 my-8">
+                        <div className="story-container px-12">
+                            <label className="swap">
+                                <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+                                <div className="swap-on text-blue-500">Lee en Espanol</div>
+                                <div className="swap-off text-blue-500">Read in English</div>
+                            </label>
+                            <div className="story-content">
+                                {isChecked ? engStory : enStory}
+                            </div>
+                        </div>
+                        <div className="story-container h-fit w-full">
+                            <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="story-container h-fit w-full">
-                <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
-            </div>
-        </div>
+            </details>
+        </>
     )
 }
 
