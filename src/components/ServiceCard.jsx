@@ -13,7 +13,7 @@ const ServiceCard = ({ cardImg, cardTitle, cardDesc }) => {
                 <p>
                     {cardDesc}
                 </p>
-                <a href="/#contact" className="btn btn-primary">Contact Us</a>
+                <a href="/#interestForm" className="btn btn-primary">Contact Us</a>
             </div>
         </div>
     )
