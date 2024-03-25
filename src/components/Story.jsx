@@ -25,15 +25,15 @@ const Story = () => {
     }
 
     return (
-        <>
-            <h4 className="text-5xl py-4 z-10 text-center">Armando's Story</h4>
+        <div className="story-wrapper px-12 py-4">
+            <h4 className="text-5xl">Armando's Story</h4>
             <details tabIndex={0} className="collapse collapse-arrow">
                 <summary className="collapse-title max-w-fit py-4 tracking-widest text-primary uppercase">
                     Meet the Chef
                 </summary>
                 <div className="collapse-content">
-                    <div className="story-wrapper grid col-span-1 lg:grid-cols-2 my-8">
-                        <div className="story-container px-12">
+                    <div className="story-container grid items-end col-span-1 lg:grid-cols-2 my-4">
+                        <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
                                 <div className="swap-on text-blue-500">Lee en Espanol</div>
@@ -43,13 +43,13 @@ const Story = () => {
                                 {isChecked ? engStory : enStory}
                             </div>
                         </div>
-                        <div className="story-container h-fit w-full">
+                        <div className="story-container h-fit w-full al">
                             <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
                         </div>
                     </div>
                 </div>
             </details>
-        </>
+        </div>
     )
 }
 
