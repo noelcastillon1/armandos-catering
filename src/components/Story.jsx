@@ -32,7 +32,7 @@ const Story = () => {
                     Meet the Chef
                 </summary>
                 <div className="collapse-content">
-                    <div className="story-container grid items-end col-span-1 lg:grid-cols-2 my-4">
+                    <div className="story-container grid col-span-1 md:grid-cols-2 gap-4 my-4">
                         <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
