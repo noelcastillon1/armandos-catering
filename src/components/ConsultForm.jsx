@@ -41,8 +41,12 @@ const ConsultForm = () => {
                         <FormField fieldName={"phoneNum"} labelContent={<PhoneSvg />} inputType={"tel"} placeholder={"Phone Number*"} changeValidateMessage={"Please enter your phone number"} isRequired={true} />
                         <FormField fieldName={"email"} labelContent={<EmailSvg />} inputType={"email"} placeholder={"Email*"} changeValidateMessage={"Please enter your email"} isRequired={true} />
                         <div className="flex flex-col gap-5 md:flex-row">
-                            <FormField fieldName={"date"} labelContent={<CalendarSvg />} inputType={"text"} placeholder={"Event Date*"} changeValidateMessage={"Please enter the date of your event"} isRequired={true} />
-                            <FormField fieldName={"time"} labelContent={<ClockSvg />} inputType={"text"} placeholder={"Event Time"} changeValidateMessage={"Please enter the planned event time"} isRequired={false} />
+                            <div className="flex flex-col gap-5 w-full">
+                                <FormField fieldName={"date"} labelContent={<CalendarSvg />} inputType={"text"} placeholder={"Event Date*"} changeValidateMessage={"Please enter the date of your event"} isRequired={true} />
+                            </div>
+                            <div className="flex flex-col gap-5 w-full">
+                                <FormField fieldName={"time"} labelContent={<ClockSvg />} inputType={"text"} placeholder={"Event Time"} changeValidateMessage={"Please enter the planned event time"} isRequired={false} />
+                            </div>
                         </div>
                         <FormField fieldName={"type"} labelContent={<StarSvg />} inputType={"text"} placeholder={"Type of Event*"} changeValidateMessage={"Please enter the type of event"} isRequired={true} />
                         <FormField fieldName={"guestsNum"} labelContent={<NumberSvg />} inputType={"text"} placeholder={"Number of Guests*"} changeValidateMessage={"Please enter the planned number of guests"} isRequired={true} />
