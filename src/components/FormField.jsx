@@ -6,7 +6,7 @@ const FormField = ({ fieldName, labelContent, inputType, placeholder, changeVali
         <Field
             name={fieldName}
             initialValue={""}
-            onChangeValidate={isRequired ? z.string().min(1, {changeValidateMessage}) : null}
+            onChangeValidate={isRequired ? z.string().min(1, `${changeValidateMessage}`) : null}
         >
             {({ value, setValue, onBlur, errors }) => {
                 return (
