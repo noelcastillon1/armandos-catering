@@ -46,6 +46,9 @@ const Story = () => {
                 </div>
                 <div className="collapse-content">
                     <div className="story-container grid col-span-1 md:grid-cols-2 gap-4 my-4">
+                        <div className="story-container h-fit w-full">
+                            <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
+                        </div>
                         <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
@@ -55,9 +58,6 @@ const Story = () => {
                             <div className="story-content">
                                 {isChecked ? engStory : enStory}
                             </div>
-                        </div>
-                        <div className="story-container h-fit w-full al">
-                            <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
                         </div>
                     </div>
                 </div>
