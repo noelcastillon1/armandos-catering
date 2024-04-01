@@ -1,7 +1,6 @@
 const Reviews = () => {
     return (
-        <>
-            <div className="carousel-wrapper pb-8">
+            <div className="carousel-wrapper my-8 pb-8">
                 <h6 className="text-5xl px-12 py-4">Reviews</h6>
                 <div className="carousel w-full">
                     <div id="item1" className="carousel-item w-full grid grid-rows-2 md:grid-rows-none md:grid-cols-2">
@@ -37,7 +36,6 @@ const Reviews = () => {
                     <a href="#item3" className="btn btn-primary btn-xs">3</a>
                 </div>
             </div>
-        </>
     )
 }
 

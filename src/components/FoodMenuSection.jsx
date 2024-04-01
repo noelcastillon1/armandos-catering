@@ -6,7 +6,7 @@ import VegetarianMenu from "./VegetarianMenu"
 
 const FoodMenuSection = () => {
     return (
-        <section id="menus">
+        <section id="menus" className="my-4">
             <AmericanMenu />
             <FrenchMenu />
             <ItalianMenu />
