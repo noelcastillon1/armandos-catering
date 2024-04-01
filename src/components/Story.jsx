@@ -19,21 +19,29 @@ const Story = () => {
         </button></div></div>
 
     const [isChecked, setIsChecked] = useState(engStory)
+    const [isCollapse, setIsCollapse] = useState("collapse")
+
     const handleCheckboxChange = (event) => {
         setIsChecked(event.target.checked)
+    }
+
+    const handleCollapseChange = (event) => {
+        setIsCollapse(event.target.checked)
     }
 
     return (
         <div className="story-wrapper px-12 my-12">
             <h4 className="text-5xl text-center md:text-left">Armando's Story</h4>
             <div className="collapse">
-                <input className="" type="checkbox" />
+                <input type="checkbox" checked={isCollapse} onChange={handleCollapseChange} />
                 <div className="collapse-title min-w-fit py-4 px-0 text-primary">
                     <div className="flex flex-row gap-2 justify-center md:justify-start">
                         <p className="tracking-widest uppercase">Meet the Chef</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                        <div className={`transform transition duration-250 ease-in-out ${isCollapse ? 'rotate-180' : ''}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
                 <div className="collapse-content">
