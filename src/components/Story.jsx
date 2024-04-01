@@ -1,7 +1,6 @@
 import { useState } from "react"
 import storyImg from "/Chef with Logo.jpeg"
 
-
 const Story = () => {
 
     const engStory = <div className="flex flex-col gap-5"><p className="leading-loose">I’m Chef Armando Castillon.</p>
@@ -20,20 +19,36 @@ const Story = () => {
         </button></div></div>
 
     const [isChecked, setIsChecked] = useState(engStory)
+    const [isCollapse, setIsCollapse] = useState("collapse")
+
     const handleCheckboxChange = (event) => {
         setIsChecked(event.target.checked)
+    }
+
+    const handleCollapseChange = (event) => {
+        setIsCollapse(event.target.checked)
     }
 
     return (
         <div className="story-wrapper px-12 my-12">
             <h4 className="text-5xl text-center md:text-left">Armando's Story</h4>
             <div className="collapse">
-            <input className="" type="checkbox" /> 
-                <div className="collapse-title min-w-fit py-4 px-0 text-center md:text-left tracking-widest text-primary uppercase">
-                    Meet the Chef
+                <input type="checkbox" checked={isCollapse} onChange={handleCollapseChange} />
+                <div className="collapse-title min-w-fit py-4 px-0 text-primary">
+                    <div className="flex flex-row gap-2 justify-center md:justify-start">
+                        <p className="tracking-widest uppercase">Meet the Chef</p>
+                        <div className={`transform transition duration-250 ease-in-out ${isCollapse ? 'rotate-180' : ''}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
                 <div className="collapse-content">
                     <div className="story-container grid col-span-1 md:grid-cols-2 gap-4 my-4">
+                        <div className="story-container h-fit w-full">
+                            <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
+                        </div>
                         <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
@@ -43,9 +58,6 @@ const Story = () => {
                             <div className="story-content">
                                 {isChecked ? engStory : enStory}
                             </div>
-                        </div>
-                        <div className="story-container h-fit w-full al">
-                            <img className="object-cover h-3/4 w-full" src={storyImg} alt="" />
                         </div>
                     </div>
                 </div>
