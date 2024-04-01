@@ -4,7 +4,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst }) 
             <article className="grid col-span-1 md:grid-cols-2 my-8">
                 <div className="food-menu text-center m-auto md:text-left md:m-0 md:px-12 md:grid md:grid-cols-2 gap-2">
                     <h2 className="menu-name text-center m-auto md:text-left md:m-0 col-span-2 md:w-1/2 py-8 text-6xl lg:text-8xl text-gray-300 z-10">The {menuName} Menu</h2>
-                    <div className="main-dishes-container">
+                    <div className="main-dishes-container px-12">
                         <p className="main-dishes-subtitle py-4 tracking-widest text-primary uppercase">Main Dishes</p>
                         <ul className="main-dishes-ul leading-loose">
                             {mainDishes.map((item, index) => (
@@ -14,7 +14,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst }) 
                             ))}
                         </ul>
                     </div>
-                    <div className="non-main-container">
+                    <div className="non-main-container px-12">
                         <div className="salads-container">
                             <p className="salads-dishes-subtitle py-4 tracking-widest text-primary uppercase">Salads</p>
                             <ul className="salads-dishes-ul leading-loose">
