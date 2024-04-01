@@ -25,7 +25,7 @@ const Story = () => {
     }
 
     return (
-        <div className="story-wrapper px-12 py-4">
+        <div className="story-wrapper px-12 my-12">
             <h4 className="text-5xl">Armando's Story</h4>
             <details tabIndex={0} className="collapse collapse-arrow">
                 <summary className="collapse-title max-w-fit py-4 tracking-widest text-primary uppercase">
