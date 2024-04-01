@@ -27,10 +27,11 @@ const Story = () => {
     return (
         <div className="story-wrapper px-12 my-12">
             <h4 className="text-5xl text-center md:text-left">Armando's Story</h4>
-            <details tabIndex={0} className="collapse collapse-arrow">
-                <summary className="collapse-title max-w-fit py-4 tracking-widest text-primary uppercase">
+            <div className="collapse">
+            <input className="" type="checkbox" /> 
+                <div className="collapse-title min-w-fit py-4 px-0 text-center md:text-left tracking-widest text-primary uppercase">
                     Meet the Chef
-                </summary>
+                </div>
                 <div className="collapse-content">
                     <div className="story-container grid col-span-1 md:grid-cols-2 gap-4 my-4">
                         <div>
@@ -48,7 +49,7 @@ const Story = () => {
                         </div>
                     </div>
                 </div>
-            </details>
+            </div>
         </div>
     )
 }
