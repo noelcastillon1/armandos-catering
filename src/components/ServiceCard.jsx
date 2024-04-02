@@ -1,11 +1,11 @@
-const ServiceCard = ({ cardImg, cardTitle, cardDesc }) => {
+const ServiceCard = ({ cardImg, cardTitle, cardDesc, altText }) => {
     return (
         <div className="card shadow-xl">
             <figure className="max-h-52 lg:max-h-72 min-h-40">
                 <img
                     className="object-contain"
                     src={cardImg}
-                    alt=""
+                    alt={altText}
                 />
             </figure>
             <div className="card-body">

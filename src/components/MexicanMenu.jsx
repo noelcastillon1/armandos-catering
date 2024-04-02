@@ -6,7 +6,7 @@ import { mexicanMenuItems } from "./constants/index";
 
 const MexicanMenu = () => {
     return (
-        <FoodMenu menuImg={menuImg} isImgFirst={true} menuName={"Mexican"} mainDishes={mexicanMenuItems.mainDishes} salads={mexicanMenuItems.salads} sides={mexicanMenuItems.sides} />
+        <FoodMenu menuImg={menuImg} isImgFirst={true} menuName={"Mexican"} mainDishes={mexicanMenuItems.mainDishes} salads={mexicanMenuItems.salads} sides={mexicanMenuItems.sides} altText={"Plate of Chicken in a Creamy Chipotle Sauce"} />
     )
 }
 

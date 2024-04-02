@@ -14,7 +14,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center max-w-sm hidden md:flex">
-                <a href="/"><img src="/Monochrome White Logo.png" alt="" /></a>
+                <a href="/"><img src="/Monochrome White Logo.png" alt="Armando's Catering Logo" /></a>
             </div>
             <div className="navbar-end">
                 <a href="/#contact" className="btn btn-primary">Contact Us</a>
