@@ -211,3 +211,23 @@ export const vegetarianMenuItems = {
     { name: "*all plates include two side dishes and a dinner roll" },
   ],
 };
+
+export const reviews = {
+  tamara: {
+    itemId: "item1",
+    reviewContent:
+      "Armando and his team are absolutely amazing from the food to the customer service he provides. I had my wedding catered from him and his team and everything was super organized and tasted amazing! My wedding was 400 people I was so nervous in finding someone who was able to feed that many people and they handled it with grace! Thank you again I will continue to recommend Armando!",
+    reviewer: "Tamara Meraz",
+  },
+
+  hassan: {
+    itemId: "item2",
+    reviewContent: "Armando is the greatest chef in the Valley! My family always get him to cook for us in small and Big events! His food is amazing and delicious! Way better than the fancier restaurant here in Fresno! Great service and delicious food what else can we ask for!",
+    reviewer: "Hassan Macedo",
+  },
+  blake: {
+    itemId: "item3",
+    reviewContent: "High-quality food with excellent flavor, our meal was definitely made with love. Armando’s Catering has great service, will definitely be using his services for all our big or small events! My coworkers along with myself enjoyed our meal so much. 10/10 will be recommending Armando’s catering to our friends and family.",
+    reviewer: "Blake Horwath",
+  },
+};
