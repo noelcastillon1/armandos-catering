@@ -34,7 +34,7 @@ const Story = () => {
             <h4 className="text-5xl text-center md:text-left">Armando's Story</h4>
             <div className="collapse">
                 <input type="checkbox" checked={isCollapse} aria-label="collapsible menu" onChange={handleCollapseChange} />
-                <div className="collapse-title min-w-fit py-4 px-0 text-primary">
+                <div className="collapse-title min-w-fit py-4 px-0 text-secondary">
                     <div className="flex flex-row gap-2 justify-center md:justify-start">
                         <p className="tracking-widest uppercase">Meet the Chef</p>
                         <div className={`transform transition duration-250 ease-in-out ${isCollapse ? 'rotate-180' : ''}`}>
@@ -52,8 +52,8 @@ const Story = () => {
                         <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-                                <div className="swap-on text-blue-500">Lee en Espanol</div>
-                                <div className="swap-off text-blue-500">Read in English</div>
+                                <div className="swap-on text-blue-600">Lee en Espanol</div>
+                                <div className="swap-off text-blue-600">Read in English</div>
                             </label>
                             <div className="story-content">
                                 {isChecked ? engStory : enStory}

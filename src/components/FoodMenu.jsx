@@ -3,9 +3,9 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, al
         <div className="food-menu-wrapper grid">
             <article className="grid col-span-1 md:grid-cols-2 my-8">
                 <div className="food-menu text-center m-auto md:text-left md:m-0 md:px-12 md:grid md:grid-cols-2 gap-2">
-                    <h2 className="menu-name text-center m-auto md:text-left md:m-0 col-span-2 md:w-1/2 py-8 text-6xl lg:text-8xl text-gray-300 z-10">The {menuName} Menu</h2>
+                    <h2 className="menu-name text-center m-auto md:text-left md:m-0 col-span-2 md:w-1/2 py-8 text-6xl lg:text-8xl text-gray-500 z-10">The {menuName} Menu</h2>
                     <div className="main-dishes-container px-12 md:px-0">
-                        <p className="main-dishes-subtitle py-4 tracking-widest text-primary uppercase">Main Dishes</p>
+                        <p className="main-dishes-subtitle py-4 tracking-widest text-secondary uppercase">Main Dishes</p>
                         <ul className="main-dishes-ul leading-loose">
                             {mainDishes.map((item, index) => (
                                 <li key={index}>
@@ -16,7 +16,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, al
                     </div>
                     <div className="non-main-container px-12 md:px-0">
                         <div className="salads-container">
-                            <p className="salads-dishes-subtitle py-4 tracking-widest text-primary uppercase">Salads</p>
+                            <p className="salads-dishes-subtitle py-4 tracking-widest text-secondary uppercase">Salads</p>
                             <ul className="salads-dishes-ul leading-loose">
                                 {salads.map((item, index) => (
                                     <li key={index}>
@@ -26,7 +26,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, al
                             </ul>
                         </div>
                         <div className="side-dishes-container">
-                            <p className="sides-dishes-subtitle py-4 tracking-widest text-primary uppercase">Sides</p>
+                            <p className="sides-dishes-subtitle py-4 tracking-widest text-secondary uppercase">Sides</p>
                             <ul className="sides-dishes-ul leading-loose">
                                 {sides.map((item, index) => (
                                     <li key={index}>
