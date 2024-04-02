@@ -3,7 +3,7 @@ import FoodMenuSection from "../components/FoodMenuSection";
 import ConsultationSection from "../components/ConsultationSection";
 import Services from "../components/Services";
 import Story from "../components/Story";
-import Reviews from "../components/Reviews";
+import ReviewSection from "../components/ReviewSection";
 
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
       <Services />
       <ConsultationSection />
       <Story />
-      <Reviews />
+      <ReviewSection />
     </>
   );
 };
