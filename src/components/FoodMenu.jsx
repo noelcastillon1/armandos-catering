@@ -1,4 +1,4 @@
-const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst }) => {
+const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, altText }) => {
     return (
         <div className="food-menu-wrapper grid">
             <article className="grid col-span-1 md:grid-cols-2 my-8">
@@ -41,7 +41,7 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst }) 
                     </div>
                 </div>
                 <div className={`menu-img-container h-96 md:h-full w-full ${isImgFirst == true ? "md:order-first" : ""}`}>
-                    <img className="object-cover h-full w-full" src={menuImg} alt="" />
+                    <img className="object-cover h-full w-full" src={menuImg} alt={altText} />
                 </div>
             </article>
         </div>

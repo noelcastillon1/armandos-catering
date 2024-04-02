@@ -1,8 +1,8 @@
-const Review = ({ reviewId, reviewContent, reviewer, img }) => {
+const Review = ({ reviewId, reviewContent, reviewer, img, altText }) => {
     return (
         <div id={reviewId} className="carousel-item w-full grid grid-rows-2 md:grid-rows-none md:grid-cols-2">
             <div className="review-img-container order-last md:order-first h-64 md:h-96 w-full">
-                <img className="object-cover w-full h-full" src={img} />
+                <img className="object-cover w-full h-full" src={img} alt={altText} />
             </div>
             <div className="review-text pb-2 px-12">
                 <p className="md:text-2xl">"{reviewContent}"</p>

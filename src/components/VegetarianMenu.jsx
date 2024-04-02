@@ -6,7 +6,7 @@ import { vegetarianMenuItems } from "./constants/index";
 
 const VegetarianMenu = () => {
     return (
-        <FoodMenu menuImg={menuImg} menuName={"Vegetarian"} mainDishes={vegetarianMenuItems.mainDishes} salads={vegetarianMenuItems.salads} sides={vegetarianMenuItems.sides} />
+        <FoodMenu menuImg={menuImg} menuName={"Vegetarian"} mainDishes={vegetarianMenuItems.mainDishes} salads={vegetarianMenuItems.salads} sides={vegetarianMenuItems.sides} altText={"Plate of Quinoa Salad with Avocado"} />
     )
 }
 
