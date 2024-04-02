@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "clean": "rm -rf dist && echo 'Done.'",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.10.0",
     "houseform": "^1.11.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
