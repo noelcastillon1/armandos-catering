@@ -33,7 +33,7 @@ const Story = () => {
         <div className="story-wrapper px-12 my-12">
             <h4 className="text-5xl text-center md:text-left">Armando's Story</h4>
             <div className="collapse">
-                <input type="checkbox" checked={isCollapse} onChange={handleCollapseChange} />
+                <input type="checkbox" checked={isCollapse} aria-label="collapsible menu" onChange={handleCollapseChange} />
                 <div className="collapse-title min-w-fit py-4 px-0 text-primary">
                     <div className="flex flex-row gap-2 justify-center md:justify-start">
                         <p className="tracking-widest uppercase">Meet the Chef</p>
