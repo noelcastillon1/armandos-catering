@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <div className="navbar bg-gradient-to-r from-primary to-secondary">
+        <div className="navbar bg-gradient-to-r from-primary from-50% to-secondary">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex="0" role="button" aria-label="dropdown menu" className="btn btn-ghost btn-circle">
@@ -14,7 +14,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center max-w-sm hidden md:flex">
-                <a href="/"><img src="/Monochrome White Logo.png" alt="Armando's Catering Logo" /></a>
+                <a href="/"><img src="/Monochrome Black Logo.png" alt="Armando's Catering Logo" /></a>
             </div>
             <div className="navbar-end">
                 <a href="/#contact" className="btn btn-primary">Contact Us</a>
