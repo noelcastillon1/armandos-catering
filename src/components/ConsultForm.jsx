@@ -1,5 +1,6 @@
 import { Form } from "houseform"
 import FormField from "./FormField"
+import { addSubmission } from "../util/addSubmission";
 
 import { UserSvg } from "./constants/svgs"
 import { PhoneSvg } from "./constants/svgs"
@@ -10,30 +11,25 @@ import { StarSvg } from "./constants/svgs"
 import { NumberSvg } from "./constants/svgs"
 import { QuestionSvg } from "./constants/svgs"
 
-const url = "https://script.google.com/macros/s/AKfycbxI9UC_2019X-UGxMOXIDkIkS8rOSDp6WipD3jQxgbteMUIsHrPWDB6C72isgGYd-ht/exec"
-
 const ConsultForm = () => {
     return (
         <Form
             onSubmit={(values) => {
-                fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'text/plain;charset=utf-8',
-                    },
-                    body: JSON.stringify(values),
-                })
-                    .then((res) => res.json())
-                    .then((values) => console.log('values', values))
-                    .catch((err) => console.log('err', err));
-                alert("Form was submitted with: " + JSON.stringify(values));
+                alert("Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!");
+                addSubmission(values)
             }}
         >
-            {({ isValid, submit }) => (
+            {({ isValid, submit, isSubmitted, reset }) => (
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
-                        submit()
+                        if (isSubmitted) {
+                            alert("You already submitted the form. If you have any additional questions, please email us at chefarmandocatering@gmail.com")
+                        } else {
+                            submit().then(() => {
+                                reset();
+                            })
+                        }
                     }}
                 >
                     <div className="form-field-container flex flex-col gap-5 md:mx-6">

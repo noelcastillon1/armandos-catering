@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "firebase": "^10.10.0",
     "houseform": "^1.11.1",
     "prop-types": "^15.8.1",
