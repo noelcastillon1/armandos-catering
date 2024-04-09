@@ -1,5 +1,7 @@
 import { Form } from "houseform"
 import FormField from "./FormField"
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
 
 import { UserSvg } from "./constants/svgs"
 import { PhoneSvg } from "./constants/svgs"
@@ -10,23 +12,29 @@ import { StarSvg } from "./constants/svgs"
 import { NumberSvg } from "./constants/svgs"
 import { QuestionSvg } from "./constants/svgs"
 
-const url = "https://script.google.com/macros/s/AKfycbxI9UC_2019X-UGxMOXIDkIkS8rOSDp6WipD3jQxgbteMUIsHrPWDB6C72isgGYd-ht/exec"
+const addSubmission = async (e) => {
+    let formValues = JSON.stringify(e)
+    try {
+        const docRef = await addDoc(collection(db, "mail"), {
+            to: ["chefarmandocatering@gmail.com"],
+            message: {
+                subject: "New Interest Submission!",
+                text: formValues
+            },
+        });
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
+};
+
 
 const ConsultForm = () => {
     return (
         <Form
             onSubmit={(values) => {
-                fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'text/plain;charset=utf-8',
-                    },
-                    body: JSON.stringify(values),
-                })
-                    .then((res) => res.json())
-                    .then((values) => console.log('values', values))
-                    .catch((err) => console.log('err', err));
                 alert("Form was submitted with: " + JSON.stringify(values));
+                addSubmission(values)
             }}
         >
             {({ isValid, submit }) => (
