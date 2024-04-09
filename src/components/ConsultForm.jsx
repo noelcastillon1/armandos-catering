@@ -1,7 +1,6 @@
 import { Form } from "houseform"
 import FormField from "./FormField"
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
+import { addSubmission } from "../util/addSubmission";
 
 import { UserSvg } from "./constants/svgs"
 import { PhoneSvg } from "./constants/svgs"
@@ -12,36 +11,25 @@ import { StarSvg } from "./constants/svgs"
 import { NumberSvg } from "./constants/svgs"
 import { QuestionSvg } from "./constants/svgs"
 
-const addSubmission = async (e) => {
-    let formValues = JSON.stringify(e)
-    try {
-        const docRef = await addDoc(collection(db, "mail"), {
-            to: ["chefarmandocatering@gmail.com"],
-            message: {
-                subject: "New Interest Submission!",
-                text: formValues
-            },
-        });
-        console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-        console.error("Error adding document: ", e);
-    }
-};
-
-
 const ConsultForm = () => {
     return (
         <Form
             onSubmit={(values) => {
-                alert("Form was submitted with: " + JSON.stringify(values));
+                alert("Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!");
                 addSubmission(values)
             }}
         >
-            {({ isValid, submit }) => (
+            {({ isValid, submit, isSubmitted, reset }) => (
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
-                        submit()
+                        if (isSubmitted) {
+                            alert("You already submitted the form. If you have any additional questions, please email us at chefarmandocatering@gmail.com")
+                        } else {
+                            submit().then(() => {
+                                reset();
+                            })
+                        }
                     }}
                 >
                     <div className="form-field-container flex flex-col gap-5 md:mx-6">
