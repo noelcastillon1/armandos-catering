@@ -1,7 +1,7 @@
 import { Field } from "houseform"
 import { z } from "zod"
 
-const FormField = ({ fieldName, labelContent, inputType, placeholder, changeValidateMessage, isRequired }) => {
+const FormField = ({ fieldName, labelContent, inputType, placeholder, changeValidateMessage, isRequired, min }) => {
     return (
         <Field
             name={fieldName}
@@ -15,9 +15,10 @@ const FormField = ({ fieldName, labelContent, inputType, placeholder, changeVali
                             {labelContent}
                             <input
                                 type={inputType}
-                                className="grow"
+                                className="grow text-[#9ca3af]"
                                 placeholder={placeholder}
                                 value={value}
+                                min={min}
                                 onChange={(e) => setValue(e.target.value)}
                                 onBlur={onBlur}
                             />

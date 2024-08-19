@@ -13,39 +13,26 @@ import { NumberSvg } from "./constants/svgs";
 import { QuestionSvg } from "./constants/svgs";
 
 const ConsultForm = () => {
-  const [date, setDate] = useState("");
-
   return (
     <Form
       onSubmit={(values) => {
-        console.log(values);
-        // let { date } = setDate();
-        // convert date string to date
-        // if in past, throw error (find how errors are thrown)
-        //
-        // alert(
-        //   "Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!",
-        // );
-        // addSubmission(values);
+        alert(
+          "Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!",
+        );
+        addSubmission(values)
       }}
     >
       {({ isValid, submit, isSubmitted, reset }) => (
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            console.log(e);
-            submit().then(() => {
-              reset();
-            });
-            // if (isSubmitted) {
-            //   alert(
-            //     "You already submitted the form. If you have any additional questions, please email us at chefarmandocatering@gmail.com",
-            //   );
-            // } else {
-            //   submit().then(() => {
-            //     reset();
-            //   });
-            // }
+            if (isSubmitted) {
+              alert("You already submitted the form. If you have any additional questions, please email us at chefarmandocatering@gmail.com")
+            } else {
+              submit().then(() => {
+                reset();
+              })
+            }
           }}
         >
           <div className="form-field-container flex flex-col gap-5 md:mx-6">
@@ -79,6 +66,7 @@ const ConsultForm = () => {
                   fieldName={"date"}
                   labelContent={<CalendarSvg />}
                   inputType={"date"}
+                  min={new Date().toISOString().split('T')[0]}
                   placeholder={"Event Date*"}
                   changeValidateMessage={
                     "Please enter a valid date for your event"
@@ -90,9 +78,8 @@ const ConsultForm = () => {
                 <FormField
                   fieldName={"time"}
                   labelContent={<ClockSvg />}
-                  inputType={"text"}
+                  inputType={"time"}
                   placeholder={"Event Time"}
-                  changeValidateMessage={"Please enter the planned event time"}
                   isRequired={false}
                 />
               </div>
@@ -108,7 +95,7 @@ const ConsultForm = () => {
             <FormField
               fieldName={"guestsNum"}
               labelContent={<NumberSvg />}
-              inputType={"text"}
+              inputType={"number"}
               placeholder={"Number of Guests*"}
               changeValidateMessage={
                 "Please enter the planned number of guests"
@@ -120,13 +107,12 @@ const ConsultForm = () => {
               labelContent={<QuestionSvg />}
               inputType={"text"}
               placeholder={"Questions?"}
-              changeValidateMessage={"Please enter your full name"}
               isRequired={false}
             />
             <div>
               <button
                 className="btn btn-primary"
-                // disabled={!isValid}
+                disabled={!isValid}
                 type="submit"
               >
                 Submit
