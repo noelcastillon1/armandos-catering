@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Form } from "houseform";
 import FormField from "./FormField";
 import { addSubmission } from "../util/addSubmission";
