@@ -52,7 +52,7 @@ const Story = () => {
                         <div>
                             <label className="swap">
                                 <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-                                <div className="swap-on text-blue-600">Lee en Espanol</div>
+                                <div className="swap-on text-blue-600">Lee en Español</div>
                                 <div className="swap-off text-blue-600">Read in English</div>
                             </label>
                             <div className="story-content">
