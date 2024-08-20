@@ -12,52 +12,44 @@ const ConsultForm = () => {
         addSubmission(values)
       }}
     >
-      {({ isValid, submit, isSubmitted, reset }) => (
+      {({ isValid, submit, reset }) => (
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            if (isSubmitted) {
-              alert("You already submitted the form. If you have any additional questions, please email us at chefarmandocatering@gmail.com")
-            } else {
-              submit().then(() => {
-                reset();
-              })
-            }
+            submit().then(() => {
+              reset();
+            })
           }}
         >
           <div className="form-field-container flex flex-col gap-5 md:mx-6">
             <FormField
               fieldName={"name"}
-              labelContent={<UserSvg />}
               inputType={"text"}
-              placeholder={"Full Name*"}
+              placeholder={"Full Name"}
               changeValidateMessage={"Please enter your full name"}
               isRequired={true}
             />
             <FormField
               fieldName={"phoneNum"}
-              labelContent={<PhoneSvg />}
               inputType={"tel"}
-              placeholder={"Phone Number*"}
+              placeholder={"Phone Number"}
               changeValidateMessage={"Please enter your phone number"}
               isRequired={true}
             />
             <FormField
               fieldName={"email"}
-              labelContent={<EmailSvg />}
               inputType={"email"}
-              placeholder={"Email*"}
-              changeValidateMessage={"Please enter your email"}
+              placeholder={"Email"}
+              changeValidateMessage={"Please enter a valid email address"}
               isRequired={true}
             />
             <div className="flex flex-col gap-5 md:flex-row">
               <div className="flex w-full flex-col gap-5">
                 <FormField
                   fieldName={"date"}
-                  labelContent={<CalendarSvg />}
                   inputType={"date"}
                   min={new Date().toISOString().split('T')[0]}
-                  placeholder={"Event Date*"}
+                  placeholder={"Event Date"}
                   changeValidateMessage={
                     "Please enter a valid date for your event"
                   }
@@ -67,7 +59,6 @@ const ConsultForm = () => {
               <div className="flex w-full flex-col gap-5">
                 <FormField
                   fieldName={"time"}
-                  labelContent={<ClockSvg />}
                   inputType={"time"}
                   placeholder={"Event Time"}
                   isRequired={false}
@@ -76,17 +67,15 @@ const ConsultForm = () => {
             </div>
             <FormField
               fieldName={"type"}
-              labelContent={<StarSvg />}
               inputType={"text"}
-              placeholder={"Type of Event*"}
+              placeholder={"Type of Event"}
               changeValidateMessage={"Please enter the type of event"}
               isRequired={true}
             />
             <FormField
               fieldName={"guestsNum"}
-              labelContent={<NumberSvg />}
-              inputType={"number"}
-              placeholder={"Number of Guests*"}
+              inputType={"tel"}
+              placeholder={"Number of Guests"}
               changeValidateMessage={
                 "Please enter the planned number of guests"
               }
@@ -94,7 +83,6 @@ const ConsultForm = () => {
             />
             <FormField
               fieldName={"comment"}
-              labelContent={<QuestionSvg />}
               inputType={"text"}
               placeholder={"Questions?"}
               isRequired={false}
