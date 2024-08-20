@@ -1,23 +1,25 @@
 import { Field } from "houseform"
 import { z } from "zod"
 
-const FormField = ({ fieldName, labelContent, inputType, placeholder, changeValidateMessage, isRequired }) => {
+const FormField = ({ fieldName, inputType, placeholder, changeValidateMessage, isRequired, min }) => {
     return (
         <Field
             name={fieldName}
             initialValue={""}
-            onChangeValidate={isRequired ? z.string().min(1, `${changeValidateMessage}`) : null}
+            onBlurValidate={isRequired ? z.string().min(1, `${changeValidateMessage}`) : null}
         >
             {({ value, setValue, onBlur, errors }) => {
                 return (
                     <>
-                        <label className="input input-bordered flex items-center gap-2 w-full">
-                            {labelContent}
+                        <label className="form-control w-full">
+                            <div className="label">
+                                <span className="label-text">{isRequired ? "*" + placeholder : placeholder}</span>
+                            </div>
                             <input
                                 type={inputType}
-                                className="grow"
-                                placeholder={placeholder}
+                                className="input input-bordered w-full grow"
                                 value={value}
+                                min={min}
                                 onChange={(e) => setValue(e.target.value)}
                                 onBlur={onBlur}
                             />
