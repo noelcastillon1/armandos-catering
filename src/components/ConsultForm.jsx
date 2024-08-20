@@ -2,15 +2,6 @@ import { Form } from "houseform";
 import FormField from "./FormField";
 import { addSubmission } from "../util/addSubmission";
 
-import { UserSvg } from "./constants/svgs";
-import { PhoneSvg } from "./constants/svgs";
-import { EmailSvg } from "./constants/svgs";
-import { CalendarSvg } from "./constants/svgs";
-import { ClockSvg } from "./constants/svgs";
-import { StarSvg } from "./constants/svgs";
-import { NumberSvg } from "./constants/svgs";
-import { QuestionSvg } from "./constants/svgs";
-
 const ConsultForm = () => {
   return (
     <Form
