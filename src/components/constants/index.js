@@ -1,7 +1,7 @@
 export const americanMenuItems = {
   mainDishes: [
-    { name: "BBQ Pork Ribs", price: 16 },
-    { name: "Honey Spicy BBQ Pork Chops", price: 16 },
+    { name: "BBQ Pork Ribs", price: 17 },
+    { name: "Honey Spicy BBQ Pork Chops", price: 17 },
     {
       name: "Surf, Turf, & Sky (Shrimp, filet mignon, and chicken)",
       price: null,
@@ -17,14 +17,14 @@ export const americanMenuItems = {
     { name: "New York Steak", price: null },
     {
       name: "Grilled Salmon",
-      price: 17,
+      price: 19,
       desc: "Served with brown sugar, honey mustard, mango relish, or spicy tropical salsa",
     },
   ],
   salads: [
-    { name: "Caesar Salad" },
-    { name: "Baby Green Salad" },
-    { name: "Spring Mixed Salad" },
+    { name: "Caesar Salad", price: 0.99 },
+    { name: "Baby Green Salad", price: 0.99 },
+    { name: "Spring Mixed Salad", price: 0.99 },
     {
       name: "*Your choice of our house salad dressing, ranch, or thousand island",
     },
@@ -42,8 +42,8 @@ export const americanMenuItems = {
 
 export const frenchMenuItems = {
   mainDishes: [
-    { name: "Chicken Cordon Bleu", price: 18 },
-    { name: "Chicken a la Parisienne", price: 17 },
+    { name: "Chicken Cordon Bleu", price: 19 },
+    { name: "Chicken a la Parisienne", price: 18 },
     { name: "Stuffed Steak Rolls", price: null },
     {
       name: "Chateaubriand Steak",
@@ -52,17 +52,17 @@ export const frenchMenuItems = {
     },
     {
       name: "Shrimp with Creamy Champagne Sauce",
-      price: 18,
+      price: 19,
     },
     {
       name: "Stuffed Salmon",
-      price: 19,
+      price: 20,
       desc: "Served with vegetables and cream cheese in béchamel sauce",
     },
-    { name: "Honey Dijon Mustard Glaze Salmon", price: 18 },
+    { name: "Honey Dijon Mustard Glaze Salmon", price: 19 },
     { name: "Filet Mignon", price: null },
   ],
-  salads: [{ name: "Baby Green Salad w/ Vinaigrette (regular or pepita)" }],
+  salads: [{ name: "Baby Green Salad w/ Vinaigrette (regular or pepita)", price: 0.99 }],
   sides: [
     { name: "Baked Potatoes" },
     { name: "Rice Pilaf" },
@@ -76,23 +76,23 @@ export const frenchMenuItems = {
 
 export const italianMenuItems = {
   mainDishes: [
-    { name: "Chicken Fettuccini Alfredo", price: 16 },
-    { name: "Chicken Linguini al Pesto", price: 16 },
-    { name: "Chicken Fettuccini Florentine", price: 16 },
+    { name: "Chicken Fettuccini Alfredo", price: 17 },
+    { name: "Chicken Linguini al Pesto", price: 17 },
+    { name: "Chicken Fettuccini Florentine", price: 17 },
     {
       name: "Chicken Fettuccini Primavera ",
-      price: 16,
+      price: 17,
     },
     {
       name: "Spaghetti with Meatballs in Pomodoro Sauce",
-      price: 16,
+      price: 17,
     },
     { name: "Gorgonzola Steak", price: 19 },
     { name: "Beef Tortelloni", price: 18 },
-    { name: "Chicken Parmesan", price: 17 },
+    { name: "Chicken Parmesan", price: 18 },
     {
       name: "Chicken Marsala",
-      price: 17,
+      price: 18,
     },
     {
       name: "Shrimp and Chicken with Penne Pasta",
@@ -126,33 +126,32 @@ export const mexicanMenuItems = {
   mainDishes: [
     {
       name: "Fajitas",
-      price: 14,
+      price: 15,
       desc: "Your choice of Chicken, Beef, or Shrimp (Beef $2 extra, Shrimp $2 extra, Mixed $2 extra)",
     },
-    { name: "Chicken Mole", price: 14 },
-    { name: "Chile Verde", price: 14 },
+    { name: "Chicken Mole", price: 15 },
+    { name: "Chile Verde", price: 15 },
     {
       name: "Chicken in Creamy Chipotle Sauce",
-      price: 15,
+      price: 16,
       desc: "(Poblano & Cheese stuffing $2 extra)",
     },
     {
       name: "Chicken Breast in Creamy Poblano Sauce",
-      price: 15,
+      price: 16,
     },
     {
       name: "Birria o Barbacoa",
-      price: null,
+      price: 16,
       desc: "Choice of goat (chivo) or beef (res)",
     },
-    { name: "Chile Colorado", price: 15 },
+    { name: "Chile Colorado", price: 16 },
   ],
   salads: [
-    { name: "Chicken Chipotle Salad" },
-    { name: "Mexican Caesar Salad" },
-    { name: "Ensalada de Nopales (Cactus Salad)" },
+    { name: "Chicken Chipotle Salad", price: 0.99 },
+    { name: "Mexican Caesar Salad", price: 0.99 },
     {
-      name: "Tequila Lime Mexican Salad",
+      name: "Tequila Lime Mexican Salad", price: 0.99
     },
   ],
   sides: [
@@ -164,9 +163,9 @@ export const mexicanMenuItems = {
     { name: "Mixed Vegetables" },
     { name: "Dinner Rolls" },
     {
-      name: "*all dishes include two side dishes and dinner rolls or tortillas",
+      name: "*all dishes include two side dishes and dinner rolls or tortillas"
     },
-    { name: "Chips & Salsa $1.50 extra" },
+    { name: "Chips & Salsa", price: 0.50 },
   ],
 };
 
@@ -222,12 +221,14 @@ export const reviews = {
 
   hassan: {
     itemId: "item2",
-    reviewContent: "Armando is the greatest chef in the Valley! My family always get him to cook for us in small and Big events! His food is amazing and delicious! Way better than the fancier restaurant here in Fresno! Great service and delicious food what else can we ask for!",
+    reviewContent:
+      "Armando is the greatest chef in the Valley! My family always get him to cook for us in small and Big events! His food is amazing and delicious! Way better than the fancier restaurant here in Fresno! Great service and delicious food what else can we ask for!",
     reviewer: "Hassan Macedo",
   },
   blake: {
     itemId: "item3",
-    reviewContent: "High-quality food with excellent flavor, our meal was definitely made with love. Armando’s Catering has great service, will definitely be using his services for all our big or small events! My coworkers along with myself enjoyed our meal so much. 10/10 will be recommending Armando’s catering to our friends and family.",
+    reviewContent:
+      "High-quality food with excellent flavor, our meal was definitely made with love. Armando’s Catering has great service, will definitely be using his services for all our big or small events! My coworkers along with myself enjoyed our meal so much. 10/10 will be recommending Armando’s catering to our friends and family.",
     reviewer: "Blake Horwath",
   },
 };
