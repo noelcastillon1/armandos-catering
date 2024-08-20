@@ -19,6 +19,11 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, al
                             <p className="salads-dishes-subtitle py-4 tracking-widest text-secondary uppercase">Salads</p>
                             <ul className="salads-dishes-ul leading-loose">
                                 {salads.map((item, index) => (
+                                    item.price ? 
+                                    <li key={index}>
+                                        {item.name} - {item.price == null ? "Market Price" : `$${item.price}`}
+                                    </li>
+                                    :
                                     <li key={index}>
                                         {item.name}
                                     </li>
@@ -29,6 +34,11 @@ const FoodMenu = ({ menuName, mainDishes, salads, sides, menuImg, isImgFirst, al
                             <p className="sides-dishes-subtitle py-4 tracking-widest text-secondary uppercase">Sides</p>
                             <ul className="sides-dishes-ul leading-loose">
                                 {sides.map((item, index) => (
+                                    item.price ? 
+                                    <li key={index}>
+                                        {item.name} - {item.price == null ? "Market Price" : `$${item.price}`}
+                                    </li>
+                                    :
                                     <li key={index}>
                                         {item.name}
                                     </li>
