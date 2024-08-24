@@ -4,7 +4,6 @@ export const americanMenuItems = {
     { name: "Honey Spicy BBQ Pork Chops", price: 17 },
     {
       name: "Surf, Turf, & Sky (Shrimp, filet mignon, and chicken)",
-      price: null,
       desc: "(Shrimp, filet mignon, and chicken)",
     },
     {
@@ -12,9 +11,9 @@ export const americanMenuItems = {
       price: 16,
       desc: "Bathed in a creamy lemon sauce",
     },
-    { name: "Tri-Tip", price: null },
-    { name: "Prime Ribs", price: null },
-    { name: "New York Steak", price: null },
+    { name: "Tri-Tip" },
+    { name: "Prime Ribs" },
+    { name: "New York Steak" },
     {
       name: "Grilled Salmon",
       price: 19,
@@ -44,10 +43,10 @@ export const frenchMenuItems = {
   mainDishes: [
     { name: "Chicken Cordon Bleu", price: 19 },
     { name: "Chicken a la Parisienne", price: 18 },
-    { name: "Stuffed Steak Rolls", price: null },
+    { name: "Stuffed Steak Rolls" },
     {
       name: "Chateaubriand Steak",
-      price: null,
+
       desc: "Served with béarnaise sauce",
     },
     {
@@ -60,9 +59,14 @@ export const frenchMenuItems = {
       desc: "Served with vegetables and cream cheese in béchamel sauce",
     },
     { name: "Honey Dijon Mustard Glaze Salmon", price: 19 },
-    { name: "Filet Mignon", price: null },
+    { name: "Filet Mignon" },
   ],
-  salads: [{ name: "Baby Green Salad w/ Vinaigrette (regular or pepita)", price: 0.99 }],
+  salads: [
+    {
+      name: "Baby Green Salad w/ Vinaigrette (regular or pepita)",
+      price: 0.99,
+    },
+  ],
   sides: [
     { name: "Baked Potatoes" },
     { name: "Rice Pilaf" },
@@ -151,7 +155,8 @@ export const mexicanMenuItems = {
     { name: "Chicken Chipotle Salad", price: 0.99 },
     { name: "Mexican Caesar Salad", price: 0.99 },
     {
-      name: "Tequila Lime Mexican Salad", price: 0.99
+      name: "Tequila Lime Mexican Salad",
+      price: 0.99,
     },
   ],
   sides: [
@@ -163,9 +168,9 @@ export const mexicanMenuItems = {
     { name: "Mixed Vegetables" },
     { name: "Dinner Rolls" },
     {
-      name: "*all dishes include two side dishes and dinner rolls or tortillas"
+      name: "*all dishes include two side dishes and dinner rolls or tortillas",
     },
-    { name: "Chips & Salsa", price: 0.50 },
+    { name: "Chips & Salsa", price: 0.5 },
   ],
 };
 
@@ -183,9 +188,9 @@ export const vegetarianMenuItems = {
       price: 16,
       desc: "Bathed in a creamy lemon sauce",
     },
-    { name: "Tri-Tip", price: null },
-    { name: "Prime Ribs", price: null },
-    { name: "New York Steak", price: null },
+    { name: "Tri-Tip" },
+    { name: "Prime Ribs" },
+    { name: "New York Steak" },
     {
       name: "Grilled Salmon",
       price: 17,
