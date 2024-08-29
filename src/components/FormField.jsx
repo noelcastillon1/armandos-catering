@@ -1,7 +1,7 @@
 import { Field } from "houseform"
 import { z } from "zod"
 
-const FormField = ({ fieldName, inputType, placeholder, changeValidateMessage, isRequired, min }) => {
+const FormField = ({ fieldName, inputType, placeholder, dataTestId, changeValidateMessage, isRequired, min }) => {
     return (
         <Field
             name={fieldName}
@@ -19,13 +19,14 @@ const FormField = ({ fieldName, inputType, placeholder, changeValidateMessage, i
                                 type={inputType}
                                 className="input input-bordered w-full grow"
                                 value={value}
+                                data-testid={dataTestId}
                                 min={min}
                                 onChange={(e) => setValue(e.target.value)}
                                 onBlur={onBlur}
                             />
                         </label>
                         {errors.map((error) => (
-                            <p className="text-error" key={error}>{error}</p>
+                            <p className="text-error" data-testid="input-error" key={error}>{error}</p>
                         ))}
                     </>
                 )
