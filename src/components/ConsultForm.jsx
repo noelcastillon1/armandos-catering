@@ -14,6 +14,7 @@ const ConsultForm = () => {
     >
       {({ isValid, submit, reset }) => (
         <form
+          data-testid="catering-interest-form"
           onSubmit={(e) => {
             e.preventDefault();
             submit().then(() => {
@@ -100,6 +101,7 @@ const ConsultForm = () => {
                 className="btn btn-primary"
                 disabled={!isValid}
                 type="submit"
+                data-testid="submit-button"
               >
                 Submit
               </button>
