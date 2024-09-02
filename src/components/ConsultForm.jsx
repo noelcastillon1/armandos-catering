@@ -14,6 +14,7 @@ const ConsultForm = () => {
     >
       {({ isValid, submit, reset }) => (
         <form
+          data-testid="catering-interest-form"
           onSubmit={(e) => {
             e.preventDefault();
             submit().then(() => {
@@ -28,6 +29,7 @@ const ConsultForm = () => {
               placeholder={"Full Name"}
               changeValidateMessage={"Please enter your full name"}
               isRequired={true}
+              dataTestId={"name-input"}
             />
             <FormField
               fieldName={"phoneNum"}
@@ -35,6 +37,7 @@ const ConsultForm = () => {
               placeholder={"Phone Number"}
               changeValidateMessage={"Please enter your phone number"}
               isRequired={true}
+              data-testid={"phone-input"}
             />
             <FormField
               fieldName={"email"}
@@ -42,6 +45,7 @@ const ConsultForm = () => {
               placeholder={"Email"}
               changeValidateMessage={"Please enter a valid email address"}
               isRequired={true}
+              data-testid={"email-input"}
             />
             <div className="flex flex-col gap-5 md:flex-row">
               <div className="flex w-full flex-col gap-5">
@@ -54,6 +58,7 @@ const ConsultForm = () => {
                     "Please enter a valid date for your event"
                   }
                   isRequired={true}
+                  data-testid={"date-input"}
                 />
               </div>
               <div className="flex w-full flex-col gap-5">
@@ -62,6 +67,7 @@ const ConsultForm = () => {
                   inputType={"time"}
                   placeholder={"Event Time"}
                   isRequired={false}
+                  data-testid={"time-input"}
                 />
               </div>
             </div>
@@ -71,6 +77,7 @@ const ConsultForm = () => {
               placeholder={"Type of Event"}
               changeValidateMessage={"Please enter the type of event"}
               isRequired={true}
+              data-testid={"event-type-input"}
             />
             <FormField
               fieldName={"guestsNum"}
@@ -80,18 +87,21 @@ const ConsultForm = () => {
                 "Please enter the planned number of guests"
               }
               isRequired={true}
+              data-testid={"guest-num-input"}
             />
             <FormField
               fieldName={"comment"}
               inputType={"text"}
               placeholder={"Questions?"}
               isRequired={false}
+              data-testid={"comment-input"}
             />
             <div>
               <button
                 className="btn btn-primary"
                 disabled={!isValid}
                 type="submit"
+                data-testid="submit-button"
               >
                 Submit
               </button>
