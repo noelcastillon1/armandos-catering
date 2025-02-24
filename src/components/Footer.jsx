@@ -22,7 +22,7 @@ const Footer = () => {
                     <span>3185 Willow Ave Suite F, Clovis, CA 93612</span>
                 </a>
                 <a
-                    href="tel:5594296074"
+                    href="tel:5594926074"
                     className="flex gap-1 items-center md:hover:text-secondary"
                 >
                     <svg
@@ -37,7 +37,7 @@ const Footer = () => {
                             clipRule="evenodd"
                         />
                     </svg>
-                    <span>(559) 429-6074</span>
+                    <span>(559) 492-6074</span>
                 </a>
                 <a
                     href="mailto:chefarmandocatering@gmail.com"
