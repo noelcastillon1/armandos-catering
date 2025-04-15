@@ -14,13 +14,16 @@ This project utilizes modern web development technologies to ensure a seamless a
 
 ## Getting Started
 
-To get started with this project, follow these steps:
+To get started with this project using [Bun](https://bun.sh), follow these steps:
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
-3. Run `npm install` to install dependencies.
-4. Run `npm run dev` to start the development server.
-5. Open your browser and navigate to `http://localhost:3000` to view the website.
+3. Make sure you have Bun installed. If not, you can install it by running:
+   ```bash
+   curl -fsSL https://bun.sh/install | bash
+4. Install dependencies with `bun install`
+5. Start the development server with `bun run dev`
+6. Open your browser and navigate to http://localhost:5173 to view the website.
 
 ## Scripts
 
