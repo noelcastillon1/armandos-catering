@@ -1,14 +1,14 @@
 export const americanMenuItems = {
   mainDishes: [
-    { name: "BBQ Pork Ribs", price: 17 },
-    { name: "Honey Spicy BBQ Pork Chops", price: 17 },
+    { name: "BBQ Pork Ribs", price: 19 },
+    { name: "Honey Spicy BBQ Pork Chops", price: 18 },
     {
       name: "Surf, Turf, & Sky (Shrimp, filet mignon, and chicken)",
       desc: "(Shrimp, filet mignon, and chicken)",
     },
     {
       name: "Marinated Chicken Breast",
-      price: 16,
+      price: 17,
       desc: "Bathed in a creamy lemon sauce",
     },
     { name: "Tri-Tip" },
@@ -16,7 +16,7 @@ export const americanMenuItems = {
     { name: "New York Steak" },
     {
       name: "Grilled Salmon",
-      price: 19,
+      price: 21,
       desc: "Served with brown sugar, honey mustard, mango relish, or spicy tropical salsa",
     },
   ],
@@ -25,7 +25,7 @@ export const americanMenuItems = {
     { name: "Baby Green Salad", price: 0.99 },
     { name: "Spring Mixed Salad", price: 0.99 },
     {
-      name: "*Your choice of our house salad dressing, ranch, or thousand island",
+      name: "*your choice of our house salad dressing, ranch, or thousand island",
     },
   ],
   sides: [
@@ -51,14 +51,14 @@ export const frenchMenuItems = {
     },
     {
       name: "Shrimp with Creamy Champagne Sauce",
-      price: 19,
+      price: 21,
     },
     {
       name: "Stuffed Salmon",
-      price: 20,
+      price: 22,
       desc: "Served with vegetables and cream cheese in béchamel sauce",
     },
-    { name: "Honey Dijon Mustard Glaze Salmon", price: 19 },
+    { name: "Honey Dijon Mustard Glaze Salmon", price: 21 },
     { name: "Filet Mignon" },
   ],
   salads: [
@@ -80,19 +80,20 @@ export const frenchMenuItems = {
 
 export const italianMenuItems = {
   mainDishes: [
-    { name: "Chicken Fettuccini Alfredo", price: 17 },
-    { name: "Chicken Linguini al Pesto", price: 17 },
-    { name: "Chicken Fettuccini Florentine", price: 17 },
+    { name: "Chicken Fettuccini Alfredo", price: 18 },
+    { name: "Chicken Linguini al Pesto", price: 18 },
+    { name: "Chicken Fettuccini Florentine", price: 18 },
     {
       name: "Chicken Fettuccini Primavera ",
-      price: 17,
+      price: 18,
     },
     {
       name: "Spaghetti with Meatballs in Pomodoro Sauce",
-      price: 17,
+      price: 18,
     },
-    { name: "Gorgonzola Steak", price: 19 },
-    { name: "Beef Tortelloni", price: 18 },
+    { name: "Gorgonzola Steak", price: 20 },
+    { name: "Beef Tortelloni", price: 19 },
+    { name: "Beef Boscaoila", price: 19 },
     { name: "Chicken Parmesan", price: 18 },
     {
       name: "Chicken Marsala",
@@ -104,11 +105,11 @@ export const italianMenuItems = {
     },
     {
       name: "Pasta Pescatore",
-      price: 21,
+      price: 22,
     },
     {
       name: "Beef Lasagna",
-      price: 17,
+      price: 19,
     },
   ],
   salads: [
@@ -130,29 +131,30 @@ export const mexicanMenuItems = {
   mainDishes: [
     {
       name: "Fajitas",
-      price: 15,
+      price: 16,
       desc: "Your choice of Chicken, Beef, or Shrimp (Beef $2 extra, Shrimp $2 extra, Mixed $2 extra)",
     },
-    { name: "Chicken Mole", price: 15 },
-    { name: "Chile Verde", price: 15 },
+    { name: "Chicken Mole", price: 16 },
+    { name: "Chile Verde", price: 16 },
     {
       name: "Chicken in Creamy Chipotle Sauce",
-      price: 16,
-      desc: "(Poblano & Cheese stuffing $2 extra)",
+      price: 17,
+      desc: "(ham & cheese stuffed, option, +$1)",
     },
     {
       name: "Chicken Breast in Creamy Poblano Sauce",
-      price: 16,
+      price: 17,
+      desc: "(poblano & cheese stuffed, option, +$1)",
     },
     {
       name: "Birria o Barbacoa",
-      price: 16,
+      price: 17,
       desc: "Choice of goat (chivo) or beef (res)",
     },
-    { name: "Chile Colorado", price: 16 },
+    { name: "Chile Colorado", price: 17 },
   ],
   salads: [
-    { name: "Chicken Chipotle Salad", price: 0.99 },
+    // { name: "Chicken Chipotle Salad", price: 0.99 },
     { name: "Mexican Caesar Salad", price: 0.99 },
     {
       name: "Tequila Lime Mexican Salad",
@@ -176,43 +178,49 @@ export const mexicanMenuItems = {
 
 export const vegetarianMenuItems = {
   mainDishes: [
-    { name: "Portobello Fajitas", price: 17 },
-    { name: "Cheese Enchilada Casserole", price: 14 },
-    { name: "Eggplant Rollatini", price: 17 },
+    { name: "Portobello Fajitas", price: 18 },
+    { name: "Eggplant Rollatini", price: 18 },
     {
       name: "Eggplant Parmesan",
-      price: 17,
+      price: 18,
     },
     {
       name: "Fettuccini Primavera",
-      price: 16,
-      desc: "Bathed in a creamy lemon sauce",
-    },
-    { name: "Tri-Tip" },
-    { name: "Prime Ribs" },
-    { name: "New York Steak" },
-    {
-      name: "Grilled Salmon",
       price: 17,
-      desc: "Served with brown sugar, honey mustard, mango relish, or spicy tropical salsa",
+    },
+    {
+      name: "Vegetarian Pasta Alfredo",
+      price: 17,
+    },
+    {
+      name: "Cheese Enchildada Casserole",
+      price: 16,
+    },
+    {
+      name: "Paella Verduda",
+      price: 17,
+    },
+    {
+      name: "Vegetable Tofu Stir Fry",
+      price: 17,
     },
   ],
   salads: [
-    { name: "Caesar Salad" },
-    { name: "Baby Green Salad" },
-    { name: "Spring Mixed Salad" },
+    { name: "Vegetarian Caesar Salad" },
+    { name: "Kale Cranberry Quinoa Salad" },
+    { name: "Italian Garbanzo Salad" },
+    { name: "Farro Salad" },
+    { name: "Cherry Tomato Couscous Salad" },
     {
-      name: "*Your choice of our house salad dressing, ranch, or thousand island",
+      name: "*salads priced at $4 as a side, $12 as a main dish",
     },
   ],
   sides: [
-    { name: "Potato Wedges" },
-    { name: "French Fries" },
-    { name: "Coleslaw" },
-    { name: "Mashed Potatoes" },
-    { name: "Buttered Rice" },
-    { name: "Mixed Vegetables" },
-    { name: "*all plates include two side dishes and a dinner roll" },
+    { name: "Brown or Basmati Rice" },
+    { name: "Whole or Refried Beans" },
+    {
+      name: "*all main dishes include two side dishes and dinner roll except for pasta dishes that come with salad",
+    },
   ],
 };
 
