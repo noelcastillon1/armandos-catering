@@ -1,14 +1,14 @@
 export const americanMenuItems = {
   mainDishes: [
     { name: "BBQ Pork Ribs", price: 19 },
-    { name: "Honey Spicy BBQ Pork Chops", price: 18 },
+    { name: "Honey Spicy BBQ Pork Chops", price: 19 },
     {
       name: "Surf, Turf, & Sky (Shrimp, filet mignon, and chicken)",
       desc: "(Shrimp, filet mignon, and chicken)",
     },
     {
       name: "Marinated Chicken Breast",
-      price: 17,
+      price: 18,
       desc: "Bathed in a creamy lemon sauce",
     },
     { name: "Tri-Tip" },
@@ -16,7 +16,7 @@ export const americanMenuItems = {
     { name: "New York Steak" },
     {
       name: "Grilled Salmon",
-      price: 21,
+      price: 24,
       desc: "Served with brown sugar, honey mustard, mango relish, or spicy tropical salsa",
     },
   ],
@@ -41,8 +41,8 @@ export const americanMenuItems = {
 
 export const frenchMenuItems = {
   mainDishes: [
-    { name: "Chicken Cordon Bleu", price: 19 },
-    { name: "Chicken a la Parisienne", price: 18 },
+    { name: "Chicken Cordon Bleu", price: 21 },
+    { name: "Chicken a la Parisienne", price: 19 },
     { name: "Stuffed Steak Rolls" },
     {
       name: "Chateaubriand Steak",
@@ -51,14 +51,14 @@ export const frenchMenuItems = {
     },
     {
       name: "Shrimp with Creamy Champagne Sauce",
-      price: 21,
+      price: 23,
     },
     {
       name: "Stuffed Salmon",
-      price: 22,
+      price: 24,
       desc: "Served with vegetables and cream cheese in béchamel sauce",
     },
-    { name: "Honey Dijon Mustard Glaze Salmon", price: 21 },
+    { name: "Honey Dijon Mustard Glaze Salmon", price: 24 },
     { name: "Filet Mignon" },
   ],
   salads: [
@@ -81,27 +81,27 @@ export const frenchMenuItems = {
 export const italianMenuItems = {
   mainDishes: [
     { name: "Chicken Fettuccini Alfredo", price: 18 },
-    { name: "Chicken Linguini al Pesto", price: 18 },
-    { name: "Chicken Fettuccini Florentine", price: 18 },
+    { name: "Chicken Linguini al Pesto", price: 19 },
+    { name: "Chicken Fettuccini Florentine", price: 19 },
     {
       name: "Chicken Fettuccini Primavera ",
-      price: 18,
+      price: 19,
     },
     {
       name: "Spaghetti with Meatballs in Pomodoro Sauce",
-      price: 18,
+      price: 19,
     },
-    { name: "Gorgonzola Steak", price: 20 },
-    { name: "Beef Tortelloni", price: 19 },
-    { name: "Beef Boscaoila", price: 19 },
-    { name: "Chicken Parmesan", price: 18 },
+    { name: "Gorgonzola Steak", price: 21 },
+    { name: "Beef Tortelloni", price: 20 },
+    { name: "Beef Boscaoila", price: 20 },
+    { name: "Chicken Parmesan", price: 19 },
     {
       name: "Chicken Marsala",
-      price: 18,
+      price: 19,
     },
     {
       name: "Shrimp and Chicken with Penne Pasta",
-      price: 18,
+      price: 21,
     },
     {
       name: "Pasta Pescatore",
@@ -131,27 +131,27 @@ export const mexicanMenuItems = {
   mainDishes: [
     {
       name: "Fajitas",
-      price: 16,
+      price: 17,
       desc: "Your choice of Chicken, Beef, or Shrimp (Beef $2 extra, Shrimp $2 extra, Mixed $2 extra)",
     },
-    { name: "Chicken Mole", price: 16 },
-    { name: "Chile Verde", price: 16 },
+    { name: "Chicken Mole", price: 17 },
+    { name: "Chile Verde", price: 17 },
     {
       name: "Chicken in Creamy Chipotle Sauce",
-      price: 17,
+      price: 18,
       desc: "(ham & cheese stuffed, option, +$1)",
     },
     {
       name: "Chicken Breast in Creamy Poblano Sauce",
-      price: 17,
+      price: 18,
       desc: "(poblano & cheese stuffed, option, +$1)",
     },
     {
       name: "Birria o Barbacoa",
-      price: 17,
+      price: 18,
       desc: "Choice of goat (chivo) or beef (res)",
     },
-    { name: "Chile Colorado", price: 17 },
+    { name: "Chile Colorado", price: 18 },
   ],
   salads: [
     // { name: "Chicken Chipotle Salad", price: 0.99 },
@@ -178,31 +178,31 @@ export const mexicanMenuItems = {
 
 export const vegetarianMenuItems = {
   mainDishes: [
-    { name: "Portobello Fajitas", price: 18 },
-    { name: "Eggplant Rollatini", price: 18 },
+    { name: "Portobello Fajitas", price: 19 },
+    { name: "Eggplant Rollatini", price: 19 },
     {
       name: "Eggplant Parmesan",
-      price: 18,
+      price: 19,
     },
     {
       name: "Fettuccini Primavera",
-      price: 17,
+      price: 18,
     },
     {
       name: "Vegetarian Pasta Alfredo",
-      price: 17,
+      price: 18,
     },
     {
       name: "Cheese Enchildada Casserole",
-      price: 16,
+      price: 18,
     },
     {
       name: "Paella Verduda",
-      price: 17,
+      price: 18,
     },
     {
       name: "Vegetable Tofu Stir Fry",
-      price: 17,
+      price: 19,
     },
   ],
   salads: [
