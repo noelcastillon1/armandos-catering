@@ -7,7 +7,7 @@ const Story = () => {
         <div className="flex flex-col gap-5">
             <p className="leading-loose">I’m Chef Armando Castillon.</p>
             <p className="leading-loose">
-                Originally from Puerto Vallarta Jalisco, México. I have 40 years of experience. My beginnings in the culinary arts are in a gourmet restaurant called “La Perla” in the Westin Camino Real Hotel in Puerto Vallarta where the attention to our customers was “Geridon Service”.
+                Originally from Puerto Vallarta Jalisco, México. I have over 40 years of experience. My beginnings in the culinary arts are in a gourmet restaurant called “La Perla” in the Westin Camino Real Hotel in Puerto Vallarta where the attention to our customers was “Geridon Service”.
             </p>
             <p className="leading-loose">
                 I was trained by world famous chefs such as Chef Nelo de Camp and his team from “Fouquet’s De Paris Mexico” as well as Chef Jose Matilde Yerena and by Maritre D’ Fidencio Luna.
@@ -34,7 +34,7 @@ const Story = () => {
                 I’m Chef Armando Castillon.
             </p>
             <p className="leading-loose">
-                Originario de Puerto Vallarta, Jalisco, México. Me respaldan 40 años de experiencia. Mis inicios en el Arte Culinario fueron en el Westin Camino Real Hotel, en el restaurant gourmet “La Perla” donde la atención al cliente era “Servicio al Gueridon”.
+                Originario de Puerto Vallarta, Jalisco, México. Me respaldan mas de 40 años de experiencia. Mis inicios en el Arte Culinario fueron en el Westin Camino Real Hotel, en el restaurant gourmet “La Perla” donde la atención al cliente era “Servicio al Gueridon”.
             </p>
             <p className="leading-loose">
                 Recibí entrenamiento de grandes Chefs de reconocimiento mundial como el Chef Nelo de Camp y su equipo del Restaurant “Fouquet de Paris, México”. También del Chef José Matilde Yerena y con el Maitre D’ Fidencio Luna.
