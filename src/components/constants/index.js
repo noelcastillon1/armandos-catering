@@ -172,7 +172,7 @@ export const mexicanMenuItems = {
     {
       name: "*all dishes include two side dishes and dinner rolls or tortillas",
     },
-    { name: "Chips & Salsa", price: 0.5 },
+    { name: "Chips & Salsa", price: 0.99 },
   ],
 };
 
