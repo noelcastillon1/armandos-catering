@@ -16,7 +16,7 @@ export const americanMenuItems = {
     { name: "New York Steak" },
     {
       name: "Grilled Salmon",
-      price: 24,
+      price: 28,
       desc: "Served with brown sugar, honey mustard, mango relish, or spicy tropical salsa",
     },
   ],
@@ -51,14 +51,14 @@ export const frenchMenuItems = {
     },
     {
       name: "Shrimp with Creamy Champagne Sauce",
-      price: 23,
+      price: 25,
     },
     {
       name: "Stuffed Salmon",
-      price: 24,
+      price: 28,
       desc: "Served with vegetables and cream cheese in béchamel sauce",
     },
-    { name: "Honey Dijon Mustard Glaze Salmon", price: 24 },
+    { name: "Honey Dijon Mustard Glaze Salmon", price: 28 },
     { name: "Filet Mignon" },
   ],
   salads: [
@@ -91,9 +91,9 @@ export const italianMenuItems = {
       name: "Spaghetti with Meatballs in Pomodoro Sauce",
       price: 19,
     },
-    { name: "Gorgonzola Steak", price: 21 },
+    { name: "Gorgonzola Steak", price: 23 },
     { name: "Beef Tortelloni", price: 20 },
-    { name: "Beef Boscaoila", price: 20 },
+    { name: "Beef Boscaoila", price: 23 },
     { name: "Chicken Parmesan", price: 19 },
     {
       name: "Chicken Marsala",
@@ -243,5 +243,17 @@ export const reviews = {
     reviewContent:
       "High-quality food with excellent flavor, our meal was definitely made with love. Armando’s Catering has great service, will definitely be using his services for all our big or small events! My coworkers along with myself enjoyed our meal so much. 10/10 will be recommending Armando’s catering to our friends and family.",
     reviewer: "Blake Horwath",
+  },
+  marydith: {
+    itemId: "item4",
+    reviewContent:
+      "Armando’s catering did an excellent job with the food for our company party. They had a great price and the food tasted amazing. They are very great to work with and answering all of my questions and trust me…I had a lot! 😂 Armando came out and did a taste testing for us, since we had been burned by another caterer the year before. Thank you so much Armando’s Catering! You guys are amazing!",
+    reviewer: "Marydith Mayo",
+  },
+  ana: {
+    itemId: "item5",
+    reviewContent:
+      "We used Armando for our quincenera. Everyone could not stop talking about how amazing all the food was. Not only that when we initially met with them they allowed us to taste test 4 different plates from the menu we couldn’t decide which one and ended up with 2 items but do not regret it the most amazing food I have ever had catered I 10000 percent recommend them for your next event you won’t be disappointed",
+    reviewer: "Ana Lara",
   },
 };
