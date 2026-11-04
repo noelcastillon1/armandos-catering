@@ -2,11 +2,15 @@ import { Field } from "houseform"
 import { z } from "zod"
 
 const FormField = ({ fieldName, inputType, placeholder, dataTestId, changeValidateMessage, isRequired, min }) => {
+    const validator = isRequired ? z.string().min(1, `${changeValidateMessage}`) : null
     return (
         <Field
             name={fieldName}
             initialValue={""}
-            onBlurValidate={isRequired ? z.string().min(1, `${changeValidateMessage}`) : null}
+            // Also validate on change so an error clears (and the submit button
+            // re-enables) as soon as the field is filled, not only on blur.
+            onChangeValidate={validator}
+            onBlurValidate={validator}
         >
             {({ value, setValue, onBlur, errors }) => {
                 return (
