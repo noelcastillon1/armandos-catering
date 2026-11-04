@@ -1,25 +1,37 @@
+import { useState } from "react";
 import { Form } from "houseform";
 import FormField from "./FormField";
 import { addSubmission } from "../util/addSubmission";
 
 const ConsultForm = () => {
+  const [isSending, setIsSending] = useState(false);
+
   return (
     <Form
-      onSubmit={(values) => {
-        alert(
-          "Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!",
-        );
-        addSubmission(values)
+      onSubmit={async (values, form) => {
+        setIsSending(true);
+        try {
+          await addSubmission(values);
+          alert(
+            "Thanks for filling out our form! We'll reach back out ASAP to coordinate an appointment time!",
+          );
+          form.reset();
+        } catch (err) {
+          console.error("Error adding document: ", err);
+          alert(
+            "Sorry, we couldn't send your request. Please try again, or reach us at (559) 492-6074 or chefarmandocatering@gmail.com.",
+          );
+        } finally {
+          setIsSending(false);
+        }
       }}
     >
-      {({ isValid, submit, reset }) => (
+      {({ isValid, submit }) => (
         <form
           data-testid="catering-interest-form"
           onSubmit={(e) => {
             e.preventDefault();
-            submit().then(() => {
-              reset();
-            })
+            submit();
           }}
         >
           <div className="form-field-container flex flex-col gap-5 md:mx-6">
@@ -99,11 +111,11 @@ const ConsultForm = () => {
             <div>
               <button
                 className="btn btn-primary"
-                disabled={!isValid}
+                disabled={!isValid || isSending}
                 type="submit"
                 data-testid="submit-button"
               >
-                Submit
+                {isSending ? "Sending..." : "Submit"}
               </button>
             </div>
           </div>
